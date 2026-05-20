@@ -48,23 +48,34 @@ const data = {
   spots: [
     {
       name: "淡路夢舞台",
-      image: "images/yumebutai.jpg",
-      link: "https://www.yumebutai.co.jp/",
-      linkLabel: "公式サイト",
+      images: ["images/yumebutai.jpg", "images/yumebutai_2.jpg"],
+      links: [{ label: "公式サイト", url: "https://www.yumebutai.co.jp/" }],
       badges: [{ text: "確定", cls: "priority-top" }, { text: "雨でもOK", cls: "ok" }],
       desc: "今回の軸。安藤忠雄設計の建築・水庭・百段苑が見どころ。",
       meta: [
         ["営業時間", "7:00〜22:00（無料エリア）／あわじグリーン館10:00〜18:00"],
         ["所要時間", "45〜75分"]
       ],
-      notes: "<strong>おすすめルート:</strong> 地下駐車場 → 水庭 → 円形フォーラム → 海回廊 → 百段苑（少し） → 展望テラス。雨が強い時は百段苑は短めに。",
+      notes: "<strong>おすすめルート:</strong> 地下駐車場 → 水庭 → 円形フォーラム → 海回廊 → 百段苑（少し） → 展望テラス。雨が強い時は<strong>あわじグリーン館</strong>中心に。",
       maps: "淡路夢舞台"
     },
     {
+      name: "あわじグリーン館",
+      images: ["images/greenhouse.jpg"],
+      links: [{ label: "公式サイト", url: "https://awaji-botanicalgarden.com/" }],
+      badges: [{ text: "雨対策◎", cls: "priority-top" }, { text: "屋内", cls: "ok" }],
+      desc: "夢舞台内の温室・植物園。雨が強い日のメイン代替になる。",
+      meta: [
+        ["営業時間", "10:00〜18:00（最終入館17:30）"],
+        ["企画展", "5/16〜7/12『花の楽園〜植物のある暮らし〜』"]
+      ],
+      notes: "夢舞台の屋外回廊や百段苑を短縮して、ここで時間を取るのが雨の日の正攻法。",
+      maps: "あわじグリーン館"
+    },
+    {
       name: "多賀の浜",
-      image: "images/taganohama.jpg",
-      link: "https://www.awajishima-kanko.jp/manual/detail.html?bid=393",
-      linkLabel: "観光ガイド",
+      images: ["images/taganohama.jpg"],
+      links: [{ label: "観光ガイド", url: "https://www.awajishima-kanko.jp/manual/detail.html?bid=393" }],
       badges: [{ text: "雨次第", cls: "" }],
       desc: "播磨灘に沈む夕日を眺められる海岸。",
       meta: [
@@ -76,57 +87,116 @@ const data = {
     },
     {
       name: "絵島・岩屋港周辺",
-      image: "images/eshima.jpg",
-      link: "https://awajikanko.com/eshima/",
-      linkLabel: "観光ガイド",
+      images: ["images/eshima.jpg"],
+      links: [{ label: "観光ガイド", url: "https://awajikanko.com/eshima/" }],
       badges: [{ text: "短時間", cls: "" }],
       desc: "浜ちどりに少し早く着きそうな時の10〜15分スポット。",
       meta: [["使い方", "車から雰囲気を見るだけでもOK"]],
       maps: "絵島 岩屋港"
     },
     {
+      name: "道の駅あわじ",
+      images: ["images/michinoeki.jpg"],
+      links: [{ label: "公式サイト", url: "https://michi-awaji.co.jp/" }],
+      badges: [{ text: "時間調整", cls: "" }, { text: "橋ビュー", cls: "ok" }],
+      desc: "明石海峡大橋を真下から見られる、淡路ICすぐの道の駅。",
+      meta: [
+        ["売店", "平日 9:30〜17:30"],
+        ["レストラン海峡楼", "11:00〜17:30（L.O.17:00）"]
+      ],
+      notes: "夢舞台後、浜ちどり方面へ向かう前後の時間調整向け。橋を見て少し歩く・お土産用途。",
+      maps: "道の駅あわじ"
+    },
+    {
       name: "淡路SA・大観覧車",
-      image: "images/awajisa.jpg",
-      link: "http://awaji-kanransya.com/",
-      linkLabel: "公式サイト",
+      images: ["images/awajisa.jpg"],
+      links: [{ label: "公式サイト", url: "http://awaji-kanransya.com/" }],
       badges: [{ text: "時間調整", cls: "" }],
       desc: "帰り道の時間調整。雨で多賀の浜をやめた時の候補。",
       notes: "<strong>注意:</strong> 帰りの工事・渋滞があるので無理に入れない。",
       maps: "淡路SA 大観覧車"
+    },
+    {
+      name: "淡路島国営明石海峡公園",
+      images: ["images/kaikyopark.jpg"],
+      links: [{ label: "公式サイト", url: "https://awaji-kaikyopark.kkr.mlit.go.jp/" }],
+      badges: [{ text: "天気回復時", cls: "" }],
+      desc: "夢舞台の近く。花・水辺・芝生の広い公園。春のカーニバル開催中。",
+      meta: [
+        ["営業時間", "9:30〜17:00"],
+        ["入園料", "大人450円"]
+      ],
+      notes: "雨が止んでいて、夢舞台周辺でもう少し歩きたい時。17:00閉園なので早めの時間で。",
+      maps: "淡路島国営明石海峡公園"
+    },
+    {
+      name: "あわじ花さじき",
+      images: ["images/hanasajiki.jpg"],
+      links: [{ label: "公式サイト", url: "https://awajihanasajiki.jp/" }],
+      badges: [{ text: "天気回復時", cls: "" }, { text: "入園無料", cls: "ok" }],
+      desc: "見晴らしの良い花畑。曇り〜小雨でも景色の広がりは楽しめる。",
+      meta: [
+        ["営業時間", "9:00〜17:00（最終16:30）"],
+        ["入園料", "無料（駐車場200円）"]
+      ],
+      notes: "ありい亭後にお腹いっぱい・雨が止んでいる時の散策候補。",
+      maps: "あわじ花さじき"
+    },
+    {
+      name: "パルシェ 香りの館",
+      images: ["images/parchez.jpg"],
+      links: [{ label: "公式サイト", url: "https://www.parchez.co.jp/" }],
+      badges: [{ text: "屋内", cls: "ok" }, { text: "体験系", cls: "" }],
+      desc: "手作り香水・ハーブ体験。「歩くだけでない」要素を入れたい時に。",
+      meta: [
+        ["営業時間", "10:00〜17:00"],
+        ["体験最終受付", "16:30"],
+        ["香りの湯", "5/18〜6/19 改修工事休業"]
+      ],
+      notes: "メイン動線から外れるので、かなり時間が余った時のオプション。",
+      maps: "パルシェ 香りの館"
     }
   ],
 
   restaurants: [
     {
       name: "ありい亭 中田店",
-      image: "images/ariitei.jpg",
-      link: "https://tabelog.com/hyogo/A2806/A280601/28006780/",
-      linkLabel: "食べログ",
+      images: ["images/ariitei.jpg", "images/ariitei_2.jpg", "images/ariitei_3.jpg"],
+      links: [
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280601/28006780/" }
+      ],
+      ratings: { tabelog: "3.57", reviews: 275 },
       badges: [{ text: "確定", cls: "priority-top" }, { text: "昼食", cls: "" }],
-      desc: "12:30〜の昼食（焼肉）。",
+      desc: "自家牧場の黒毛和牛。12:30〜の昼食（焼肉）。",
       maps: "ありい亭 中田店"
     },
     {
       name: "浜ちどり",
-      image: "images/hamachidori.jpg",
-      link: "https://tabelog.com/hyogo/A2806/A280601/28034834/",
-      linkLabel: "食べログ",
+      images: ["images/hamachidori.jpg", "images/hamachidori_2.jpg", "images/hamachidori_3.jpg"],
+      links: [
+        { label: "店舗情報", url: "https://info-bird.jp/hamachidori/" },
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280601/28034834/" }
+      ],
+      ratings: { tabelog: "3.48", reviews: 340 },
       badges: [{ text: "本命", cls: "priority-top" }, { text: "夕食", cls: "" }],
-      desc: "岩屋港の岩屋ポートビル2階。海鮮・和食寄り。名物は島の生しらす丼。",
+      desc: "岩屋港の岩屋ポートビル2階。名物は島の生しらす丼。",
       meta: [
         ["営業時間", "11:00〜20:00（夜L.O.19:45）"],
         ["定休日", "火曜"],
         ["予約", "不可"],
         ["入店時刻", "18:15〜19:10推奨"]
       ],
-      notes: "<strong>注意:</strong> 予約不可。混んでいたら<strong>きとら津名店</strong>へ切り替え。",
+      notes: "<strong>注意:</strong> 予約不可。混んでいたら<strong>きとら津名店</strong>や<strong>友明丸</strong>へ切り替え。",
       maps: "お食事処 浜ちどり 岩屋港"
     },
     {
       name: "海鮮料理きとら 津名店",
-      image: "images/kitora.jpg",
-      link: "https://kaisenkitora.com/",
-      linkLabel: "公式サイト",
+      images: ["images/kitora.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://kaisenkitora.com/" },
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280601/28040141/" }
+      ],
+      ratings: { tabelog: "3.41", reviews: 139 },
       badges: [{ text: "バックアップ", cls: "priority-back" }],
       desc: "浜ちどりが混んでいた時の控え。津名一宮ICに近い。",
       meta: [
@@ -137,51 +207,152 @@ const data = {
       maps: "海鮮料理きとら 津名店"
     },
     {
+      name: "漁師めし 友明丸",
+      images: ["images/tomoakimaru.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://www.tomoakimaru.com/" }
+      ],
+      badges: [{ text: "岩屋方面バックアップ", cls: "priority-back" }],
+      desc: "魚系で軽め。浜ちどり方面のもうひとつの夕食候補。",
+      meta: [
+        ["営業時間", "11:00〜15:00／17:00〜19:00（L.O.閉店30分前）"],
+        ["定休日", "水曜"]
+      ],
+      notes: "平日夜は<strong>19:00閉店</strong>。18時台前半までの入店が安全。",
+      maps: "漁師めし 友明丸 淡路島"
+    },
+    {
       name: "GARB COSTA ORANGE",
-      image: "images/garb.png",
-      link: "https://restaurant.balnibarbi.com/shops/garb_costaorange",
-      linkLabel: "公式サイト",
-      badges: [{ text: "木曜定休", cls: "danger" }],
-      desc: "夕日を望む海辺のレストラン＆カフェ。雰囲気重視向け。",
+      images: ["images/garb.png"],
+      links: [
+        { label: "公式サイト", url: "https://restaurant.balnibarbi.com/shops/garb_costaorange" },
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280601/28054542/" }
+      ],
+      ratings: { tabelog: "3.49", reviews: 526 },
+      badges: [{ text: "営業要確認・有力", cls: "priority-back" }],
+      desc: "夕日を望む海辺のレストラン＆カフェ。雰囲気重視。",
       meta: [
         ["営業時間", "ランチ11:00〜15:00／ディナーL.O.20:00"],
-        ["定休日", "木曜（5/21は実質NG）"]
+        ["定休日", "公式は記載なし／食べログ等では『無休』情報あり"]
       ],
-      notes: "5/21は<strong>木曜定休</strong>のため、当日営業確認が取れた時のみ。",
+      notes: "<strong>営業有無を当日確認</strong>。営業していれば雰囲気のある夕食候補。",
       maps: "GARB COSTA ORANGE 淡路島"
     },
     {
+      name: "青海波 海の舎",
+      images: ["images/seikaiha.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://awaji-seikaiha.com/uminoya/" }
+      ],
+      badges: [{ text: "雰囲気重視", cls: "" }],
+      desc: "海沿いのクラシックな洋食レストラン。雨の日でも雰囲気を保ちやすい。",
+      meta: [
+        ["ランチ", "11:00〜15:00"],
+        ["カフェ", "14:00〜17:00"],
+        ["ディナー", "17:00〜21:00（L.O.19:20）"]
+      ],
+      notes: "少し大人っぽい雰囲気。GARBや浜ちどりの代替に。",
+      maps: "青海波 海の舎 淡路島"
+    },
+    {
       name: "クラフトキッチン / CRAFT CIRCUS",
-      image: "images/craftcircus.jpg",
-      link: "https://awajicraftcircus.com/",
-      linkLabel: "公式サイト",
+      images: ["images/craftcircus.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://awajicraftcircus.com/" },
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280601/28047055/" }
+      ],
+      ratings: { tabelog: "3.48", reviews: 252 },
       badges: [{ text: "木曜定休", cls: "danger" }],
       desc: "玉ねぎバーガー、島ピザなど。",
       meta: [
         ["営業時間", "11:00〜19:00"],
         ["定休日", "木曜"]
       ],
-      notes: "5/21は<strong>定休日</strong>。基本的に候補から外す。",
+      notes: "5/21は<strong>定休日</strong>。雰囲気は良いが、臨時営業確認が取れた場合のみ。",
       maps: "CRAFT CIRCUS 淡路島"
     },
     {
+      name: "淡路シェフガーデン",
+      images: ["images/chefgarden.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://www.awaji-chefgarden.com/" }
+      ],
+      badges: [{ text: "選択肢豊富", cls: "" }],
+      desc: "フードコート形式。満腹感が読めない時・店を決めきれない時に。",
+      meta: [
+        ["営業時間", "11:00〜20:00"],
+        ["席数", "屋内100席／テラス600席"]
+      ],
+      notes: "テナントごとに営業日が異なるので、当日は現地で選ぶ前提。雨だとテラスの魅力が落ちる。",
+      maps: "淡路シェフガーデン"
+    },
+    {
       name: "きとら 淡路夢舞台店",
-      image: "images/kitora.jpg",
-      link: "https://www.yumebutai.co.jp/restaurant_kitora/",
-      linkLabel: "公式サイト",
+      images: ["images/kitora.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://www.yumebutai.co.jp/restaurant_kitora/" }
+      ],
       badges: [{ text: "営業要確認", cls: "danger" }],
       desc: "夢舞台内で便利だが、木曜・不定休と案内されているため不確実。",
       notes: "当日営業確認が取れた場合のみ。",
       maps: "きとら 淡路夢舞台店"
+    },
+    {
+      name: "食い処おかや",
+      links: [
+        { label: "店舗情報", url: "https://sci-awaji.jp/eemon_umaimon/okaya/" }
+      ],
+      badges: [{ text: "完全保険", cls: "priority-back" }],
+      desc: "津名方面の和食・定食系ローカル店。完全バックアップ枠。",
+      meta: [
+        ["営業時間", "11:00〜20:00"],
+        ["定休日", "水曜"],
+        ["駐車場", "10台"]
+      ],
+      notes: "デート感より実用性。浜ちどり・きとらが全てNGだった時の保険。",
+      maps: "食い処おかや 淡路島"
+    },
+    {
+      name: "ええとこどり 大谷店",
+      images: ["images/eetokodori.jpg"],
+      links: [
+        { label: "観光ガイド", url: "https://www.awajishima-kanko.jp/manual/detail.html?bid=544" }
+      ],
+      badges: [{ text: "遅め夕食保険", cls: "priority-back" }],
+      desc: "お好み焼き・焼鳥。営業時間が長く、帰りが押した時の安全弁。",
+      meta: [
+        ["営業時間", "11:00〜15:00／17:00〜22:30（L.O.22:00）"],
+        ["定休日", "年中無休"]
+      ],
+      notes: "昼が焼肉だとやや重め。完全な最終手段として。",
+      maps: "ええとこどり 大谷店"
+    },
+    {
+      name: "淡路SA上り 飲食ゾーン",
+      images: ["images/awajisa.jpg"],
+      links: [
+        { label: "SA情報", url: "https://www.jb-highway.co.jp/topics/business_hours.html" }
+      ],
+      badges: [{ text: "最終安全弁", cls: "priority-back" }],
+      desc: "帰り道の最終夕食保険。フードコート・売店24時間。明石海峡大橋の眺めも◎。",
+      meta: [
+        ["フードコート", "24時間"],
+        ["レストラン", "平日8:00〜21:00（L.O.20:45）"]
+      ],
+      notes: "デート感は弱いが安心感は高い。最終手段だが、橋ビューがあるので完全な妥協にはならない。",
+      maps: "淡路SA 上り"
     }
   ],
 
   cafes: [
     {
       name: "幸せのパンケーキ 淡路島テラス",
-      image: "images/pancake.jpg",
-      link: "https://magia.tokyo/awaji/",
-      linkLabel: "公式サイト",
+      images: ["images/pancake.jpg", "images/pancake_2.jpg", "images/pancake_3.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://magia.tokyo/awaji/" },
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280601/28055156/" }
+      ],
+      ratings: { tabelog: "3.47", reviews: 1149 },
       badges: [{ text: "最優先", cls: "priority-top" }, { text: "全席オーシャンビュー", cls: "ok" }],
       desc: "海の見えるカフェの代表格。223席。デート向け。",
       meta: [
@@ -193,9 +364,12 @@ const data = {
     },
     {
       name: "TAKAMURA COFFEE ROASTERS",
-      image: "images/takamura.jpg",
-      link: "https://takamura-coffee.com/pages/visit-awajishima",
-      linkLabel: "公式サイト",
+      images: ["images/takamura.jpg", "images/takamura_2.jpg", "images/takamura_3.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://takamura-coffee.com/pages/visit-awajishima" },
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280601/28063123/" }
+      ],
+      ratings: { tabelog: "3.49", reviews: 302 },
       badges: [{ text: "コーヒー本命", cls: "priority-top" }],
       desc: "食後の軽い休憩に。海カフェではないが動線上で現実的。",
       meta: [
@@ -208,23 +382,29 @@ const data = {
     },
     {
       name: "GARB COSTA ORANGE",
-      image: "images/garb.png",
-      link: "https://restaurant.balnibarbi.com/shops/garb_costaorange",
-      linkLabel: "公式サイト",
-      badges: [{ text: "木曜定休", cls: "danger" }],
+      images: ["images/garb.png"],
+      links: [
+        { label: "公式サイト", url: "https://restaurant.balnibarbi.com/shops/garb_costaorange" },
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280601/28054542/" }
+      ],
+      ratings: { tabelog: "3.49", reviews: 526 },
+      badges: [{ text: "営業要確認・有力", cls: "priority-back" }],
       desc: "海辺の雰囲気が良いカフェ＆ダイニング。",
       meta: [
         ["営業時間", "11:00〜21:00"],
-        ["定休日", "木曜（5/21は実質NG）"]
+        ["定休日", "要確認"]
       ],
-      notes: "5/21は<strong>木曜定休</strong>。",
+      notes: "営業有無を当日確認。営業していればパンケーキの混雑時の代替に。",
       maps: "GARB COSTA ORANGE 淡路島"
     },
     {
       name: "miele the DINER",
-      image: "images/miele.jpg",
-      link: "https://miele-the-diner.com/",
-      linkLabel: "公式サイト",
+      images: ["images/miele.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://miele-the-diner.com/" },
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280601/28066227/" }
+      ],
+      ratings: { tabelog: "3.08" },
       badges: [{ text: "ハワイ風", cls: "" }],
       desc: "1Fアメリカンダイナー・2Fカフェ。明るくカジュアル。",
       meta: [
@@ -232,6 +412,35 @@ const data = {
         ["定休日", "火曜"]
       ],
       maps: "miele the DINER 淡路島"
+    },
+    {
+      name: "のじまスコーラ／カフェ・スコーラ",
+      images: ["images/nojima.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://nojima-scuola.com/" }
+      ],
+      badges: [{ text: "軽い休憩", cls: "" }],
+      desc: "元小学校の建物。TAKAMURAとは違う雰囲気の軽い休憩。",
+      meta: [
+        ["ランチ", "平日11:00〜14:00"],
+        ["カフェ", "14:00〜17:30（L.O.17:00）"]
+      ],
+      notes: "海ビュー最優先ではないが、雨の日の屋内休憩に。",
+      maps: "のじまスコーラ"
+    },
+    {
+      name: "PICNIC GARDEN（Frogs FARM）",
+      images: ["images/picnic.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://frogsfarm.jp/eat/picnic-garden/" }
+      ],
+      badges: [{ text: "天気回復時", cls: "" }],
+      desc: "海辺と芝生の開放感。ドリンク・スイーツ・ハンバーガー。",
+      meta: [
+        ["営業時間", "11:00〜21:00（L.O.20:00）"]
+      ],
+      notes: "屋外・開放感が魅力。雨が強いと優先度低め。焼肉後はドリンク休憩向き。",
+      maps: "PICNIC GARDEN 淡路島"
     }
   ],
 
@@ -252,12 +461,12 @@ const data = {
       items: ["運転免許証", "レンタカー予約確認書", "現金（駐車場代・雑費）", "クレジットカード", "スマホ＋充電ケーブル", "モバイルバッテリー"]
     },
     {
-      title: "雨対策（降水確率90%）",
-      items: ["折りたたみ傘 ×2", "大きめのタオル", "替えの靴下 or 防水スプレー済み靴"]
+      title: "雨・強風対策（5/21は荒天）",
+      items: ["丈夫な傘 ×2（折りたたみより通常傘推奨）", "大きめのタオル", "替えの靴下 or 防水スプレー済み靴", "薄手のレインウェア／撥水ジャケット", "薄手の上着（最高気温23°Cの予報）"]
     },
     {
       title: "あると便利",
-      items: ["車載スマホホルダー", "サングラス", "ティッシュ・ウェットティッシュ", "車内用ゴミ袋", "飲み物・お菓子", "カメラ／スマホ（写真）"]
+      items: ["車載スマホホルダー", "ティッシュ・ウェットティッシュ", "車内用ゴミ袋", "飲み物・お菓子", "カメラ／スマホ（写真）"]
     },
     {
       title: "同行者への気配り",
@@ -265,12 +474,26 @@ const data = {
     }
   ],
 
+  weather: {
+    current: "小雨、23°C（73°F）",
+    daily: [
+      { date: "5/20 (水)", low: "22°C", high: "26°C", desc: "一時的な雨や雷雨", isToday: false },
+      { date: "5/21 (木)", low: "20°C", high: "23°C", desc: "激しいにわか雨", isToday: true },
+      { date: "5/22 (金)", low: "19°C", high: "24°C", desc: "雲が増す", isToday: false },
+      { date: "5/23 (土)", low: "19°C", high: "24°C", desc: "曇り", isToday: false },
+      { date: "5/24 (日)", low: "20°C", high: "24°C", desc: "曇りのち薄日が差す", isToday: false },
+      { date: "5/25 (月)", low: "21°C", high: "26°C", desc: "おおむね晴れ", isToday: false },
+      { date: "5/26 (火)", low: "18°C", high: "25°C", desc: "上層雲からの晴れ間", isToday: false }
+    ],
+    alerts: [
+      { title: "強風注意報（淡路市陸上）", until: "木 6:00 JST", source: "気象庁" },
+      { title: "波浪注意報", until: "木 6:00 JST", source: "気象庁" },
+      { title: "高潮注意報（播磨灘側）", until: "木 0:00〜6:00 JST", source: "気象庁" },
+      { title: "雷注意報（発令中）", until: "終了時刻不明", source: "気象庁" }
+    ]
+  },
+
   info: [
-    {
-      type: "warn",
-      title: "☔ 5/21 淡路市の天気",
-      text: "雨時々止む。午前・午後とも降水確率90%。屋外散策は短めに、屋内＆屋根あり席を優先。"
-    },
     {
       type: "warn",
       title: "🚧 帰路の工事通行止め",
@@ -284,7 +507,7 @@ const data = {
     {
       type: "info",
       title: "📞 当日電話確認したい店",
-      text: "GARB COSTA ORANGE／クラフトキッチン／きとら淡路夢舞台店 — いずれも木曜定休 or 不定休。臨時営業の有無を確認。"
+      text: "GARB COSTA ORANGE／クラフトキッチン／きとら淡路夢舞台店 — 営業有無を確認。"
     }
   ]
 };
@@ -292,6 +515,8 @@ const data = {
 // ====== ヘルパー ======
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
+
+function escapeAttr(s) { return String(s).replace(/"/g, "&quot;"); }
 
 function renderFixed() {
   $("#fixed-list").innerHTML = data.fixed.map(f =>
@@ -315,6 +540,45 @@ function renderBranches() {
   `).join("");
 }
 
+function renderRatings(r) {
+  if (!r) return "";
+  const parts = [];
+  if (r.tabelog) {
+    parts.push(`<span class="rating tabelog">食べログ <strong>★${r.tabelog}</strong>${r.reviews ? `<span class="rev"> (${r.reviews}件)</span>` : ""}</span>`);
+  }
+  if (r.google) {
+    parts.push(`<span class="rating google">Googleマップ <strong>★${r.google}</strong></span>`);
+  }
+  return parts.length ? `<div class="ratings">${parts.join("")}</div>` : "";
+}
+
+function renderLinkButtons(p) {
+  const buttons = [];
+  if (p.maps) {
+    buttons.push(`<a class="btn maps-btn" href="${mapsUrl(p.maps)}" target="_blank" rel="noopener">📍 Googleマップ</a>`);
+  }
+  (p.links || []).forEach(l => {
+    const cls = l.label.includes("食べログ") ? "tabelog-btn" : "site-btn";
+    const icon = l.label.includes("食べログ") ? "🍴" : l.label.includes("ガイド") ? "📖" : "🔗";
+    buttons.push(`<a class="btn ${cls}" href="${escapeAttr(l.url)}" target="_blank" rel="noopener">${icon} ${l.label}</a>`);
+  });
+  return buttons.length ? `<div class="card-buttons">${buttons.join("")}</div>` : "";
+}
+
+function renderImageBlock(p) {
+  const imgs = p.images || (p.image ? [p.image] : []);
+  if (!imgs.length) return "";
+  const main = imgs[0];
+  const subs = imgs.slice(1);
+  const mainHtml = `<button class="card-image" data-images='${JSON.stringify(imgs)}' data-index="0" aria-label="写真を拡大"><img src="${main}" alt="${escapeAttr(p.name)}" loading="lazy" /></button>`;
+  const thumbsHtml = subs.length
+    ? `<div class="card-thumbs">${subs.map((src, i) =>
+        `<button class="thumb" data-images='${JSON.stringify(imgs)}' data-index="${i + 1}" aria-label="写真${i + 2}を拡大"><img src="${src}" alt="${escapeAttr(p.name)} ${i + 2}" loading="lazy" /></button>`
+      ).join("")}</div>`
+    : "";
+  return mainHtml + thumbsHtml;
+}
+
 function renderCards(targetId, items) {
   $(targetId).innerHTML = items.map(p => {
     const badges = (p.badges || []).map(b => `<span class="badge ${b.cls || ""}">${b.text}</span>`).join("");
@@ -322,47 +586,23 @@ function renderCards(targetId, items) {
       `<div class="meta-row"><span class="meta-label">${k}</span><span>${v}</span></div>`
     ).join("");
     const notes = p.notes ? `<div class="notes">${p.notes}</div>` : "";
-    const image = p.image
-      ? `<div class="card-image"><img src="${p.image}" alt="${p.name}" loading="lazy" /></div>`
-      : "";
-    const linkAttr = p.link ? ` data-link="${p.link}" role="link" tabindex="0"` : "";
-    const linkClass = p.link ? "card clickable" : "card";
-    const linkBadge = p.link ? `<span class="link-hint">${p.linkLabel || "公式サイト"} ↗</span>` : "";
     return `
-      <article class="${linkClass}"${linkAttr}>
-        ${image}
+      <article class="card">
+        ${renderImageBlock(p)}
         <div class="card-body">
           <div class="card-head">
-            <h3 class="card-name">${p.name}${linkBadge}</h3>
+            <h3 class="card-name">${p.name}</h3>
             <div class="card-badges">${badges}</div>
           </div>
+          ${renderRatings(p.ratings)}
           ${p.desc ? `<p class="card-desc">${p.desc}</p>` : ""}
           ${meta ? `<div class="meta">${meta}</div>` : ""}
           ${notes}
-          ${p.maps ? `<a class="maps-btn" href="${mapsUrl(p.maps)}" target="_blank" rel="noopener">📍 Googleマップで開く</a>` : ""}
+          ${renderLinkButtons(p)}
         </div>
       </article>
     `;
   }).join("");
-}
-
-function setupCardLinks() {
-  document.addEventListener("click", (e) => {
-    const card = e.target.closest(".card.clickable");
-    if (!card) return;
-    if (e.target.closest("a")) return; // existing anchors (Maps button) take precedence
-    const url = card.dataset.link;
-    if (url) window.open(url, "_blank", "noopener");
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key !== "Enter" && e.key !== " ") return;
-    const card = e.target.closest(".card.clickable");
-    if (!card) return;
-    if (e.target.closest("a")) return;
-    e.preventDefault();
-    const url = card.dataset.link;
-    if (url) window.open(url, "_blank", "noopener");
-  });
 }
 
 function renderRoutes() {
@@ -381,6 +621,36 @@ function renderPacking() {
       <ul>${g.items.map(i => `<li>${i}</li>`).join("")}</ul>
     </div>
   `).join("");
+}
+
+function renderWeather() {
+  const w = data.weather;
+  const daily = w.daily.map(d => `
+    <div class="weather-day ${d.isToday ? "today" : ""}">
+      <div class="wd-date">${d.date}${d.isToday ? "<span class='wd-today'>当日</span>" : ""}</div>
+      <div class="wd-temp">${d.low} / ${d.high}</div>
+      <div class="wd-desc">${d.desc}</div>
+    </div>
+  `).join("");
+  const alerts = w.alerts.map(a => `
+    <div class="alert-row">
+      <span class="alert-icon">⚠️</span>
+      <div>
+        <strong>${a.title}</strong>
+        <div class="alert-meta">${a.until}・${a.source}</div>
+      </div>
+    </div>
+  `).join("");
+  $("#weather-block").innerHTML = `
+    <div class="weather-now">
+      <span class="wn-label">現在</span>
+      <span class="wn-val">${w.current}</span>
+    </div>
+    <h3 class="subhead">7日予報</h3>
+    <div class="weather-grid">${daily}</div>
+    <h3 class="subhead">⚠️ 悪天候アラート</h3>
+    <div class="alerts">${alerts}</div>
+  `;
 }
 
 function renderInfo() {
@@ -404,6 +674,63 @@ function setupTabs() {
   });
 }
 
+// ====== ライトボックス ======
+const lightboxState = { images: [], index: 0 };
+
+function openLightbox(images, index = 0) {
+  lightboxState.images = images;
+  lightboxState.index = index;
+  const lb = $("#lightbox");
+  lb.hidden = false;
+  document.body.style.overflow = "hidden";
+  updateLightboxImage();
+}
+
+function closeLightbox() {
+  $("#lightbox").hidden = true;
+  document.body.style.overflow = "";
+}
+
+function updateLightboxImage() {
+  const { images, index } = lightboxState;
+  $("#lightbox-img").src = images[index];
+  $("#lightbox-counter").textContent = `${index + 1} / ${images.length}`;
+  $("#lightbox-prev").style.visibility = images.length > 1 ? "visible" : "hidden";
+  $("#lightbox-next").style.visibility = images.length > 1 ? "visible" : "hidden";
+}
+
+function lightboxNext() {
+  lightboxState.index = (lightboxState.index + 1) % lightboxState.images.length;
+  updateLightboxImage();
+}
+function lightboxPrev() {
+  lightboxState.index = (lightboxState.index - 1 + lightboxState.images.length) % lightboxState.images.length;
+  updateLightboxImage();
+}
+
+function setupLightbox() {
+  document.addEventListener("click", (e) => {
+    const trigger = e.target.closest(".card-image, .thumb");
+    if (trigger) {
+      const images = JSON.parse(trigger.dataset.images);
+      const index = parseInt(trigger.dataset.index, 10) || 0;
+      openLightbox(images, index);
+      return;
+    }
+    if (e.target.closest("#lightbox-close")) { closeLightbox(); return; }
+    if (e.target.closest("#lightbox-next")) { lightboxNext(); return; }
+    if (e.target.closest("#lightbox-prev")) { lightboxPrev(); return; }
+    if (e.target.id === "lightbox") { closeLightbox(); }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if ($("#lightbox").hidden) return;
+    if (e.key === "Escape") closeLightbox();
+    else if (e.key === "ArrowRight") lightboxNext();
+    else if (e.key === "ArrowLeft") lightboxPrev();
+  });
+}
+
 // ====== init ======
 document.addEventListener("DOMContentLoaded", () => {
   renderFixed();
@@ -414,7 +741,8 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCards("#cafes-cards", data.cafes);
   renderRoutes();
   renderPacking();
+  renderWeather();
   renderInfo();
   setupTabs();
-  setupCardLinks();
+  setupLightbox();
 });

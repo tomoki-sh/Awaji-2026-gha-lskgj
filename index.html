@@ -23,7 +23,8 @@
     <button class="tab" data-tab="cafes">カフェ</button>
     <button class="tab" data-tab="routes">ルート</button>
     <button class="tab" data-tab="packing">持ち物</button>
-    <button class="tab" data-tab="info">天気/注意</button>
+    <button class="tab" data-tab="weather">天気</button>
+    <button class="tab" data-tab="info">注意</button>
   </nav>
 
   <main class="container">
@@ -72,12 +73,27 @@
       <div class="packing-block" id="packing-block"></div>
     </section>
 
-    <!-- 天気・注意 -->
+    <!-- 天気 -->
+    <section class="panel" id="weather">
+      <h2 class="section-title">☔ 天気予報・警報</h2>
+      <div class="weather-block" id="weather-block"></div>
+    </section>
+
+    <!-- 注意 -->
     <section class="panel" id="info">
-      <h2 class="section-title">☔ 天気・注意事項</h2>
+      <h2 class="section-title">📝 注意事項</h2>
       <div class="info-block" id="info-block"></div>
     </section>
   </main>
+
+  <!-- ライトボックス -->
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="写真拡大">
+    <button id="lightbox-close" class="lb-btn lb-close" aria-label="閉じる">×</button>
+    <button id="lightbox-prev" class="lb-btn lb-prev" aria-label="前へ">‹</button>
+    <button id="lightbox-next" class="lb-btn lb-next" aria-label="次へ">›</button>
+    <img id="lightbox-img" class="lb-img" alt="" />
+    <div id="lightbox-counter" class="lb-counter"></div>
+  </div>
 
   <footer class="foot">
     <p>2026/5/21 awaji trip · made with ❤︎</p>
