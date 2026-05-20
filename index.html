@@ -12,6 +12,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
           crossorigin="" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js" defer></script>
 </head>
 <body>
   <header class="hero">
@@ -79,6 +80,25 @@
         <span class="lg-item"><span class="lg-dot" style="background:#a855f7">☕</span> カフェ</span>
         <span class="lg-item"><span class="lg-ring confirmed"></span> 確定/本命</span>
         <span class="lg-item"><span class="lg-ring warning"></span> 営業要確認</span>
+      </div>
+
+      <h3 class="subhead" style="margin-top:28px;">🛣 ルート編集</h3>
+      <p class="section-lead" style="font-size:0.85rem;">下の順番でマップ上に点線ルートが描かれます。<strong>項目を上下にドラッグして並び替え</strong>、または <strong>右の「⊕」を押すか候補をドラッグして追加</strong>できます。</p>
+      <div class="route-editor">
+        <div class="route-panel">
+          <div class="route-panel-head">
+            <span>📍 現在のルート</span>
+            <span class="route-actions">
+              <button class="mini-btn" data-action="reset">おすすめ順</button>
+              <button class="mini-btn danger" data-action="clear">空に</button>
+            </span>
+          </div>
+          <ul id="route-list" class="route-list"></ul>
+        </div>
+        <div class="route-panel">
+          <div class="route-panel-head"><span>＋ 候補から追加（ドラッグ or ⊕）</span></div>
+          <ul id="candidates-list" class="cand-list"></ul>
+        </div>
       </div>
     </section>
 

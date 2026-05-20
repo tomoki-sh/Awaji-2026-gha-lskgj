@@ -504,6 +504,86 @@ const data = {
       ],
       notes: "屋外・開放感が魅力。雨が強いと優先度低め。焼肉後はドリンク休憩向き。",
       maps: "PICNIC GARDEN 淡路島"
+    },
+    {
+      name: "カフェオアシス",
+      area: "最北端 / 淡路ハイウェイオアシス内",
+      coords: [34.6133, 135.0317],
+      category: "backup",
+      images: ["images/cafeoasis.jpg"],
+      links: [
+        { label: "公式サイト", url: "http://www.awajishimahighwayoasis.com/food/cafeoasis.html" },
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280601/28040512/" }
+      ],
+      ratings: { tabelog: "3.34", reviews: 81 },
+      badges: [{ text: "帰路で気軽", cls: "" }],
+      desc: "淡路ハイウェイオアシス内のカフェ。淡路牛＋玉ねぎのオアシスバーガーや、淡路島ミルクのソフトクリームが人気。",
+      meta: [
+        ["営業時間", "平日 9:00〜19:00（L.O.18:30）／休日 9:00〜20:00（L.O.19:15）"],
+        ["定休日", "無休"]
+      ],
+      notes: "帰路に立ち寄りやすい。気軽な軽食・ソフトクリームの休憩に。",
+      maps: "カフェオアシス 淡路ハイウェイオアシス"
+    },
+    {
+      name: "こぞらのおやつ",
+      area: "中淡路 / 山上（淡路市里）",
+      coords: [34.4670, 134.9290],
+      category: "backup",
+      images: ["images/kozora.jpg", "images/kozora_2.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://kozorasou.com/" },
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280602/28057364/" }
+      ],
+      ratings: { tabelog: "3.40", reviews: 111 },
+      badges: [{ text: "行列・人気", cls: "" }, { text: "持ち帰り", cls: "ok" }],
+      desc: "山の上の焼き菓子店。地元産卵・牛乳と北海道産小麦のマフィン10〜14種類とスコーンが評判。絵本のような静寂の空間。",
+      meta: [
+        ["営業時間", "10:00〜17:30（売り切れ次第終了）"],
+        ["定休日", "不定休"]
+      ],
+      notes: "売り切れ早めなので、車内で食べる用に立ち寄るのも◎。営業日は公式HP要確認。",
+      maps: "こぞらのおやつ 淡路島"
+    },
+    {
+      name: "COFFEE BARN",
+      area: "北淡路 / 西海岸 / 郡家・サンセットライン",
+      coords: [34.5310, 134.8770],
+      category: "warning",
+      images: ["images/coffeebarn.jpg", "images/coffeebarn_2.jpg", "images/coffeebarn_3.jpg"],
+      links: [
+        { label: "Instagram", url: "https://www.instagram.com/coffee_barn_awaji/" },
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280601/28066413/" }
+      ],
+      ratings: { tabelog: "3.42", reviews: 100 },
+      badges: [{ text: "火水定休", cls: "danger" }],
+      desc: "サンセットライン沿いのおしゃれコーヒースタンド。自家焙煎スペシャルティコーヒーとふわふわドーナツ。西海岸ビューの外テラス。",
+      meta: [
+        ["営業時間", "10:00〜17:00"],
+        ["定休日", "火曜・水曜（5/21木は営業）"]
+      ],
+      notes: "幸せのパンケーキの近くで、TAKAMURA以外の本格コーヒー選択肢として。",
+      maps: "COFFEE BARN 淡路島 郡家"
+    },
+    {
+      name: "グリナリウム淡路島",
+      area: "北淡路 / 西海岸 / 野島常磐",
+      coords: [34.5340, 134.9120],
+      category: "warning",
+      images: ["images/greenarium.jpg", "images/greenarium_2.jpg"],
+      links: [
+        { label: "公式サイト", url: "https://www.greenarium.jp/" },
+        { label: "食べログ", url: "https://tabelog.com/hyogo/A2806/A280601/28054287/" }
+      ],
+      ratings: { tabelog: "3.49", reviews: 205 },
+      badges: [{ text: "火曜定休", cls: "" }, { text: "雰囲気◎", cls: "ok" }],
+      desc: "イチゴ・トマト・ブドウを使った本格パフェやパスタが楽しめる、いちごハウスを併設したカフェ＆レストラン。",
+      meta: [
+        ["営業時間", "10:00〜16:00"],
+        ["定休日", "火曜（5/21木は営業）"]
+      ],
+      notes: "営業時間が16:00までと短いので、行くなら14〜15時台に。",
+      maps: "グリナリウム淡路島"
     }
   ],
 
@@ -590,8 +670,34 @@ const $$ = (sel) => document.querySelectorAll(sel);
 function escapeAttr(s) { return String(s).replace(/"/g, "&quot;"); }
 
 const TYPE_LABELS = { spot: "🌿 スポット", restaurant: "🍽 レストラン", cafe: "☕ カフェ" };
+const TYPE_ICONS = { spot: "🌿", restaurant: "🍽", cafe: "☕" };
 const TYPE_COLORS = { spot: "#14b8a6", restaurant: "#f97316", cafe: "#a855f7" };
 const CAT_LABELS = { confirmed: "確定 / 本命", backup: "予備候補", warning: "営業要確認" };
+
+// ====== ルート状態 ======
+const DEFAULT_ROUTE = [
+  "restaurant:ありい亭 中田店",
+  "spot:淡路夢舞台",
+  "cafe:幸せのパンケーキ 淡路島テラス",
+  "spot:多賀の浜",
+  "restaurant:浜ちどり"
+];
+
+function placeId(type, p) { return `${type}:${p.name}`; }
+function parseId(id) { const [type, ...rest] = id.split(":"); return { type, name: rest.join(":") }; }
+function getPlaceById(id) {
+  const { type, name } = parseId(id);
+  const list = type === "spot" ? data.spots : type === "restaurant" ? data.restaurants : data.cafes;
+  return list.find(p => p.name === name);
+}
+
+let routeIds = (() => {
+  try {
+    const stored = JSON.parse(localStorage.getItem("awaji_route") || "null");
+    return Array.isArray(stored) && stored.length ? stored : [...DEFAULT_ROUTE];
+  } catch { return [...DEFAULT_ROUTE]; }
+})();
+function saveRoute() { localStorage.setItem("awaji_route", JSON.stringify(routeIds)); }
 
 // ====== 描画 ======
 function renderFixed() {
@@ -842,13 +948,14 @@ function setupMap() {
     maxZoom: 18
   }).addTo(map);
 
-  // ルートライン
-  const routeLine = L.polyline(data.routeCoords, {
+  // ルートライン（routeIdsから動的に座標を組み立て）
+  const routeLine = L.polyline(routeCoordsFromIds(), {
     color: "#0891b2",
     weight: 4,
-    opacity: 0.6,
+    opacity: 0.7,
     dashArray: "8 6"
   });
+  window._awajiRouteLine = routeLine;
 
   // 全プレース
   const allPlaces = [
@@ -859,16 +966,21 @@ function setupMap() {
 
   const markers = allPlaces.filter(p => p.coords).map(p => {
     const marker = L.marker(p.coords, { icon: makeIcon(p._type, p.category) });
+    const pid = placeId(p._type, p);
     const popupHtml = `
       <div class="map-popup">
         ${p.images && p.images[0] ? `<img src="${p.images[0]}" alt="${escapeAttr(p.name)}" />` : ""}
         <h4>${p.name}</h4>
         <div class="popup-area">${p.area || ""}</div>
-        ${p.ratings && p.ratings.tabelog ? `<div class="popup-rating">食べログ ★${p.ratings.tabelog}</div>` : ""}
-        <a href="${mapsUrl(p.maps || p.name)}" target="_blank" rel="noopener">📍 Googleマップで開く</a>
+        ${p.ratings && p.ratings.tabelog ? `<div class="popup-rating">食べログ ★${p.ratings.tabelog}${p.ratings.reviews ? ` (${p.ratings.reviews}件)` : ""}</div>` : ""}
+        ${p.desc ? `<p class="popup-desc">${p.desc}</p>` : ""}
+        <div class="popup-actions">
+          <button class="popup-add" data-action="add" data-id="${pid}">＋ ルートに追加</button>
+          <a href="${mapsUrl(p.maps || p.name)}" target="_blank" rel="noopener">📍 マップ</a>
+        </div>
       </div>
     `;
-    marker.bindPopup(popupHtml, { maxWidth: 240 });
+    marker.bindPopup(popupHtml, { maxWidth: 260 });
     marker._meta = { type: p._type, category: p.category };
     return marker;
   });
@@ -896,6 +1008,144 @@ function setupMap() {
   applyFilters();
 }
 
+// ====== ルート編集 ======
+function routeCoordsFromIds() {
+  return routeIds.map(id => {
+    const p = getPlaceById(id);
+    return p && p.coords;
+  }).filter(Boolean);
+}
+
+function updateRouteLine() {
+  if (window._awajiRouteLine) {
+    window._awajiRouteLine.setLatLngs(routeCoordsFromIds());
+  }
+}
+
+function renderRouteList() {
+  const list = $("#route-list");
+  if (!list) return;
+  if (!routeIds.length) {
+    list.innerHTML = `<li class="route-empty">ピンをタップして「+ ルートに追加」、または下の候補から追加してください</li>`;
+    return;
+  }
+  list.innerHTML = routeIds.map((id, idx) => {
+    const p = getPlaceById(id);
+    if (!p) return "";
+    const { type } = parseId(id);
+    return `
+      <li class="route-item" data-id="${id}">
+        <span class="route-handle" aria-hidden="true">⠿</span>
+        <span class="route-num">${idx + 1}</span>
+        <span class="route-icon">${TYPE_ICONS[type] || "📍"}</span>
+        <span class="route-name">${p.name}</span>
+        <button class="route-remove" data-action="remove" data-id="${id}" aria-label="削除">×</button>
+      </li>
+    `;
+  }).join("");
+}
+
+function renderCandidatesList() {
+  const list = $("#candidates-list");
+  if (!list) return;
+  const allItems = [
+    ...data.spots.map(p => ({ ...p, _type: "spot" })),
+    ...data.restaurants.map(p => ({ ...p, _type: "restaurant" })),
+    ...data.cafes.map(p => ({ ...p, _type: "cafe" }))
+  ].filter(p => p.coords);
+  list.innerHTML = allItems.map(p => {
+    const pid = placeId(p._type, p);
+    const alreadyIn = routeIds.includes(pid);
+    return `
+      <li class="cand-item ${alreadyIn ? "in-route" : ""}" data-id="${pid}">
+        <span class="cand-handle" aria-hidden="true">⠿</span>
+        <span class="cand-icon">${TYPE_ICONS[p._type]}</span>
+        <span class="cand-name">${p.name}</span>
+        ${alreadyIn
+          ? `<span class="cand-badge">追加済</span>`
+          : `<button class="cand-add" data-action="add" data-id="${pid}" aria-label="ルートに追加">＋</button>`}
+      </li>
+    `;
+  }).join("");
+}
+
+function syncRouteUI() {
+  renderRouteList();
+  renderCandidatesList();
+  updateRouteLine();
+  saveRoute();
+}
+
+function addToRoute(id) {
+  if (!routeIds.includes(id)) {
+    routeIds.push(id);
+    syncRouteUI();
+  }
+}
+function removeFromRoute(id) {
+  routeIds = routeIds.filter(x => x !== id);
+  syncRouteUI();
+}
+function resetRoute() {
+  if (confirm("ルートを当日のおすすめ順番にリセットしますか？")) {
+    routeIds = [...DEFAULT_ROUTE];
+    syncRouteUI();
+  }
+}
+function clearRoute() {
+  if (confirm("ルートを空にしますか？")) {
+    routeIds = [];
+    syncRouteUI();
+  }
+}
+
+function setupRouteEditor() {
+  const routeList = $("#route-list");
+  const candList = $("#candidates-list");
+  if (!routeList || !candList) return;
+
+  // 初回描画
+  syncRouteUI();
+
+  // SortableJS によるドラッグ＆ドロップ
+  if (typeof Sortable !== "undefined") {
+    Sortable.create(routeList, {
+      group: { name: "awaji-route", pull: true, put: true },
+      animation: 150,
+      handle: ".route-handle, .route-item",
+      filter: ".route-remove, .route-empty",
+      preventOnFilter: false,
+      onSort: () => {
+        // route-item と cand-item（クローン後の候補要素）の両方を拾う
+        const ids = [...routeList.querySelectorAll("[data-id]")]
+          .map(li => li.dataset.id)
+          .filter(Boolean);
+        routeIds = [...new Set(ids)];
+        syncRouteUI();
+      }
+    });
+    Sortable.create(candList, {
+      group: { name: "awaji-route", pull: "clone", put: false },
+      sort: false,
+      animation: 150,
+      handle: ".cand-handle, .cand-item",
+      filter: ".cand-add, .in-route",
+      preventOnFilter: false
+    });
+  }
+
+  // ボタン操作（add / remove / reset / clear）
+  document.addEventListener("click", (e) => {
+    const action = e.target.closest("[data-action]")?.dataset.action;
+    if (!action) return;
+    const id = e.target.closest("[data-id]")?.dataset.id;
+    if (action === "add" && id) { addToRoute(id); }
+    else if (action === "remove" && id) { removeFromRoute(id); }
+    else if (action === "reset") { resetRoute(); }
+    else if (action === "clear") { clearRoute(); }
+  });
+}
+
 // ====== init ======
 document.addEventListener("DOMContentLoaded", () => {
   renderFixed();
@@ -911,4 +1161,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setupTabs();
   setupLightbox();
   setupMap();
+  setupRouteEditor();
 });

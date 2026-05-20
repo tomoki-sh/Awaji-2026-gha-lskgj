@@ -684,10 +684,33 @@ a:hover { text-decoration: underline; }
   color: #9a3412;
   margin-bottom: 6px;
 }
+.popup-desc {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin: 4px 0 6px;
+  line-height: 1.5;
+}
+.popup-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.popup-add {
+  flex: 1;
+  border: 0;
+  background: var(--sunset);
+  color: #fff !important;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.popup-add:hover { background: #d97706; }
 .map-popup a {
   display: inline-block;
-  margin-top: 4px;
-  padding: 4px 10px;
+  padding: 5px 10px;
   background: var(--ocean-600);
   color: #fff !important;
   border-radius: 999px;
@@ -696,6 +719,162 @@ a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 .map-popup a:hover { background: var(--ocean-700); }
+
+/* ===== Route editor ===== */
+.route-editor {
+  display: grid;
+  gap: 14px;
+  margin-top: 8px;
+}
+@media (min-width: 720px) {
+  .route-editor { grid-template-columns: 1fr 1fr; }
+}
+.route-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.route-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, var(--ocean-50), #fff);
+  border-bottom: 1px solid var(--line);
+  font-weight: 700;
+  color: var(--ocean-900);
+  font-size: 0.9rem;
+}
+.route-actions { display: flex; gap: 6px; }
+.mini-btn {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.mini-btn:hover { border-color: var(--ocean-500); color: var(--ocean-700); }
+.mini-btn.danger { color: #b91c1c; border-color: #fecaca; }
+.mini-btn.danger:hover { background: #fee2e2; }
+
+.route-list, .cand-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  display: grid;
+  gap: 6px;
+  min-height: 80px;
+  max-height: 360px;
+  overflow-y: auto;
+}
+.route-empty {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  padding: 18px 12px;
+  border: 2px dashed var(--line);
+  border-radius: 10px;
+  background: var(--ocean-50);
+}
+.route-item, .cand-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  background: var(--ocean-50);
+  border: 1px solid var(--ocean-100);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  cursor: grab;
+  user-select: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.route-item:active, .cand-item:active { cursor: grabbing; }
+.route-item:hover, .cand-item:hover { background: var(--ocean-100); }
+.route-handle, .cand-handle {
+  color: var(--ocean-300);
+  font-size: 1.1rem;
+  cursor: grab;
+  flex: 0 0 auto;
+}
+.route-num {
+  flex: 0 0 22px;
+  text-align: center;
+  background: var(--ocean-600);
+  color: #fff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.route-icon, .cand-icon {
+  font-size: 1.05rem;
+  flex: 0 0 auto;
+}
+.route-name, .cand-name {
+  flex: 1;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.route-remove {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 50%;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  font-weight: 700;
+}
+.route-remove:hover { background: #fecaca; }
+.cand-add {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: var(--sunset);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  font-weight: 700;
+}
+.cand-add:hover { background: #d97706; }
+.cand-item.in-route {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.cand-item.in-route:hover { background: var(--ocean-50); }
+.cand-badge {
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  background: var(--line);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+/* Sortable.js drag classes */
+.sortable-ghost {
+  opacity: 0.4;
+  background: var(--sand) !important;
+}
+.sortable-chosen { transform: scale(1.02); }
+.sortable-drag { box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
 .card-head {
   display: flex;
   justify-content: space-between;
