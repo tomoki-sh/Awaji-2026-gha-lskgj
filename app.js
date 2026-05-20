@@ -48,6 +48,9 @@ const data = {
   spots: [
     {
       name: "淡路夢舞台",
+      image: "images/yumebutai.jpg",
+      link: "https://www.yumebutai.co.jp/",
+      linkLabel: "公式サイト",
       badges: [{ text: "確定", cls: "priority-top" }, { text: "雨でもOK", cls: "ok" }],
       desc: "今回の軸。安藤忠雄設計の建築・水庭・百段苑が見どころ。",
       meta: [
@@ -59,6 +62,9 @@ const data = {
     },
     {
       name: "多賀の浜",
+      image: "images/taganohama.jpg",
+      link: "https://www.awajishima-kanko.jp/manual/detail.html?bid=393",
+      linkLabel: "観光ガイド",
       badges: [{ text: "雨次第", cls: "" }],
       desc: "播磨灘に沈む夕日を眺められる海岸。",
       meta: [
@@ -70,6 +76,9 @@ const data = {
     },
     {
       name: "絵島・岩屋港周辺",
+      image: "images/eshima.jpg",
+      link: "https://awajikanko.com/eshima/",
+      linkLabel: "観光ガイド",
       badges: [{ text: "短時間", cls: "" }],
       desc: "浜ちどりに少し早く着きそうな時の10〜15分スポット。",
       meta: [["使い方", "車から雰囲気を見るだけでもOK"]],
@@ -77,6 +86,9 @@ const data = {
     },
     {
       name: "淡路SA・大観覧車",
+      image: "images/awajisa.jpg",
+      link: "http://awaji-kanransya.com/",
+      linkLabel: "公式サイト",
       badges: [{ text: "時間調整", cls: "" }],
       desc: "帰り道の時間調整。雨で多賀の浜をやめた時の候補。",
       notes: "<strong>注意:</strong> 帰りの工事・渋滞があるので無理に入れない。",
@@ -87,14 +99,20 @@ const data = {
   restaurants: [
     {
       name: "ありい亭 中田店",
+      image: "images/ariitei.jpg",
+      link: "https://tabelog.com/hyogo/A2806/A280601/28006780/",
+      linkLabel: "食べログ",
       badges: [{ text: "確定", cls: "priority-top" }, { text: "昼食", cls: "" }],
       desc: "12:30〜の昼食（焼肉）。",
       maps: "ありい亭 中田店"
     },
     {
       name: "浜ちどり",
+      image: "images/hamachidori.jpg",
+      link: "https://tabelog.com/hyogo/A2806/A280601/28034834/",
+      linkLabel: "食べログ",
       badges: [{ text: "本命", cls: "priority-top" }, { text: "夕食", cls: "" }],
-      desc: "岩屋港の岩屋ポートビル2階。海鮮・和食寄り。",
+      desc: "岩屋港の岩屋ポートビル2階。海鮮・和食寄り。名物は島の生しらす丼。",
       meta: [
         ["営業時間", "11:00〜20:00（夜L.O.19:45）"],
         ["定休日", "火曜"],
@@ -106,6 +124,9 @@ const data = {
     },
     {
       name: "海鮮料理きとら 津名店",
+      image: "images/kitora.jpg",
+      link: "https://kaisenkitora.com/",
+      linkLabel: "公式サイト",
       badges: [{ text: "バックアップ", cls: "priority-back" }],
       desc: "浜ちどりが混んでいた時の控え。津名一宮ICに近い。",
       meta: [
@@ -117,6 +138,9 @@ const data = {
     },
     {
       name: "GARB COSTA ORANGE",
+      image: "images/garb.png",
+      link: "https://restaurant.balnibarbi.com/shops/garb_costaorange",
+      linkLabel: "公式サイト",
       badges: [{ text: "木曜定休", cls: "danger" }],
       desc: "夕日を望む海辺のレストラン＆カフェ。雰囲気重視向け。",
       meta: [
@@ -128,6 +152,9 @@ const data = {
     },
     {
       name: "クラフトキッチン / CRAFT CIRCUS",
+      image: "images/craftcircus.jpg",
+      link: "https://awajicraftcircus.com/",
+      linkLabel: "公式サイト",
       badges: [{ text: "木曜定休", cls: "danger" }],
       desc: "玉ねぎバーガー、島ピザなど。",
       meta: [
@@ -139,6 +166,9 @@ const data = {
     },
     {
       name: "きとら 淡路夢舞台店",
+      image: "images/kitora.jpg",
+      link: "https://www.yumebutai.co.jp/restaurant_kitora/",
+      linkLabel: "公式サイト",
       badges: [{ text: "営業要確認", cls: "danger" }],
       desc: "夢舞台内で便利だが、木曜・不定休と案内されているため不確実。",
       notes: "当日営業確認が取れた場合のみ。",
@@ -149,6 +179,9 @@ const data = {
   cafes: [
     {
       name: "幸せのパンケーキ 淡路島テラス",
+      image: "images/pancake.jpg",
+      link: "https://magia.tokyo/awaji/",
+      linkLabel: "公式サイト",
       badges: [{ text: "最優先", cls: "priority-top" }, { text: "全席オーシャンビュー", cls: "ok" }],
       desc: "海の見えるカフェの代表格。223席。デート向け。",
       meta: [
@@ -160,6 +193,9 @@ const data = {
     },
     {
       name: "TAKAMURA COFFEE ROASTERS",
+      image: "images/takamura.jpg",
+      link: "https://takamura-coffee.com/pages/visit-awajishima",
+      linkLabel: "公式サイト",
       badges: [{ text: "コーヒー本命", cls: "priority-top" }],
       desc: "食後の軽い休憩に。海カフェではないが動線上で現実的。",
       meta: [
@@ -172,6 +208,9 @@ const data = {
     },
     {
       name: "GARB COSTA ORANGE",
+      image: "images/garb.png",
+      link: "https://restaurant.balnibarbi.com/shops/garb_costaorange",
+      linkLabel: "公式サイト",
       badges: [{ text: "木曜定休", cls: "danger" }],
       desc: "海辺の雰囲気が良いカフェ＆ダイニング。",
       meta: [
@@ -183,6 +222,9 @@ const data = {
     },
     {
       name: "miele the DINER",
+      image: "images/miele.jpg",
+      link: "https://miele-the-diner.com/",
+      linkLabel: "公式サイト",
       badges: [{ text: "ハワイ風", cls: "" }],
       desc: "1Fアメリカンダイナー・2Fカフェ。明るくカジュアル。",
       meta: [
@@ -280,19 +322,47 @@ function renderCards(targetId, items) {
       `<div class="meta-row"><span class="meta-label">${k}</span><span>${v}</span></div>`
     ).join("");
     const notes = p.notes ? `<div class="notes">${p.notes}</div>` : "";
+    const image = p.image
+      ? `<div class="card-image"><img src="${p.image}" alt="${p.name}" loading="lazy" /></div>`
+      : "";
+    const linkAttr = p.link ? ` data-link="${p.link}" role="link" tabindex="0"` : "";
+    const linkClass = p.link ? "card clickable" : "card";
+    const linkBadge = p.link ? `<span class="link-hint">${p.linkLabel || "公式サイト"} ↗</span>` : "";
     return `
-      <article class="card">
-        <div class="card-head">
-          <h3 class="card-name">${p.name}</h3>
-          <div class="card-badges">${badges}</div>
+      <article class="${linkClass}"${linkAttr}>
+        ${image}
+        <div class="card-body">
+          <div class="card-head">
+            <h3 class="card-name">${p.name}${linkBadge}</h3>
+            <div class="card-badges">${badges}</div>
+          </div>
+          ${p.desc ? `<p class="card-desc">${p.desc}</p>` : ""}
+          ${meta ? `<div class="meta">${meta}</div>` : ""}
+          ${notes}
+          ${p.maps ? `<a class="maps-btn" href="${mapsUrl(p.maps)}" target="_blank" rel="noopener">📍 Googleマップで開く</a>` : ""}
         </div>
-        ${p.desc ? `<p class="card-desc">${p.desc}</p>` : ""}
-        ${meta ? `<div class="meta">${meta}</div>` : ""}
-        ${notes}
-        ${p.maps ? `<a class="maps-btn" href="${mapsUrl(p.maps)}" target="_blank" rel="noopener">📍 Googleマップで開く</a>` : ""}
       </article>
     `;
   }).join("");
+}
+
+function setupCardLinks() {
+  document.addEventListener("click", (e) => {
+    const card = e.target.closest(".card.clickable");
+    if (!card) return;
+    if (e.target.closest("a")) return; // existing anchors (Maps button) take precedence
+    const url = card.dataset.link;
+    if (url) window.open(url, "_blank", "noopener");
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const card = e.target.closest(".card.clickable");
+    if (!card) return;
+    if (e.target.closest("a")) return;
+    e.preventDefault();
+    const url = card.dataset.link;
+    if (url) window.open(url, "_blank", "noopener");
+  });
 }
 
 function renderRoutes() {
@@ -346,4 +416,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderPacking();
   renderInfo();
   setupTabs();
+  setupCardLinks();
 });
