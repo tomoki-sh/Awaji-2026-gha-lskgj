@@ -49,7 +49,7 @@ const data = {
     {
       name: "淡路夢舞台",
       area: "北淡路 / 東海岸 / 夢舞台エリア",
-      coords: [34.5613, 135.0061],
+      coords: [34.5613, 135.0068],
       category: "confirmed",
       images: ["images/yumebutai.jpg", "images/yumebutai_2.jpg"],
       links: [{ label: "公式サイト", url: "https://www.yumebutai.co.jp/" }],
@@ -65,7 +65,7 @@ const data = {
     {
       name: "あわじグリーン館",
       area: "北淡路 / 東海岸 / 夢舞台内",
-      coords: [34.5618, 135.0058],
+      coords: [34.5605, 135.0070],
       category: "confirmed",
       images: ["images/greenhouse.jpg", "images/greenhouse_2.jpg"],
       links: [{ label: "公式サイト", url: "https://awaji-botanicalgarden.com/" }],
@@ -81,7 +81,7 @@ const data = {
     {
       name: "多賀の浜",
       area: "北淡路 / 西海岸",
-      coords: [34.4783, 134.8519],
+      coords: [34.4830, 134.8830],
       category: "backup",
       images: ["images/taganohama.jpg", "images/taganohama_2.jpg"],
       links: [{ label: "観光ガイド", url: "https://www.awajishima-kanko.jp/manual/detail.html?bid=393" }],
@@ -97,7 +97,7 @@ const data = {
     {
       name: "絵島・岩屋港周辺",
       area: "最北端 / 東海岸 / 明石海峡大橋寄り",
-      coords: [34.5919, 135.0157],
+      coords: [34.5921, 135.0148],
       category: "backup",
       images: ["images/eshima.jpg", "images/eshima_2.jpg"],
       links: [{ label: "観光ガイド", url: "https://awajikanko.com/eshima/" }],
@@ -109,7 +109,7 @@ const data = {
     {
       name: "道の駅あわじ",
       area: "最北端 / 東海岸 / 明石海峡大橋直下",
-      coords: [34.6019, 135.0269],
+      coords: [34.6047, 135.0211],
       category: "backup",
       images: ["images/michinoeki.jpg"],
       links: [{ label: "公式サイト", url: "https://michi-awaji.co.jp/" }],
@@ -125,7 +125,7 @@ const data = {
     {
       name: "淡路SA・大観覧車",
       area: "最北端 / 東海岸 / 淡路IC近く",
-      coords: [34.6133, 135.0317],
+      coords: [34.6088, 135.0083],
       category: "backup",
       images: ["images/awajisa.jpg", "images/awajisa_2.jpg", "images/awajisa_3.jpg"],
       links: [{ label: "公式サイト", url: "http://awaji-kanransya.com/" }],
@@ -137,7 +137,7 @@ const data = {
     {
       name: "淡路島国営明石海峡公園",
       area: "北淡路 / 東海岸 / 夢舞台隣接",
-      coords: [34.5621, 134.9997],
+      coords: [34.5683, 135.0044],
       category: "backup",
       images: ["images/kaikyopark.jpg", "images/kaikyopark_2.jpg", "images/kaikyopark_3.jpg"],
       links: [{ label: "公式サイト", url: "https://awaji-kaikyopark.kkr.mlit.go.jp/" }],
@@ -153,7 +153,7 @@ const data = {
     {
       name: "あわじ花さじき",
       area: "北淡路 / 東海岸寄り（山側）",
-      coords: [34.5650, 134.9778],
+      coords: [34.5557, 134.9736],
       category: "backup",
       images: ["images/hanasajiki.jpg", "images/hanasajiki_2.jpg"],
       links: [{ label: "公式サイト", url: "https://awajihanasajiki.jp/" }],
@@ -169,7 +169,7 @@ const data = {
     {
       name: "パルシェ 香りの館",
       area: "中淡路 / 西海岸寄り",
-      coords: [34.4837, 134.8867],
+      coords: [34.4820, 134.8687],
       category: "backup",
       images: ["images/parchez.jpg", "images/parchez_2.jpg"],
       links: [{ label: "公式サイト", url: "https://www.parchez.co.jp/" }],
@@ -189,7 +189,7 @@ const data = {
     {
       name: "ありい亭 中田店",
       area: "中淡路 / 中田 / 津名一宮IC近く",
-      coords: [34.4316, 134.9197],
+      coords: [34.4378, 134.8889],
       category: "confirmed",
       images: ["images/ariitei.jpg", "images/ariitei_2.jpg", "images/ariitei_3.jpg"],
       links: [
@@ -203,7 +203,7 @@ const data = {
     {
       name: "浜ちどり",
       area: "最北端 / 東海岸 / 岩屋港",
-      coords: [34.5908, 135.0152],
+      coords: [34.5903, 135.0204],
       category: "confirmed",
       images: ["images/hamachidori.jpg", "images/hamachidori_2.jpg", "images/hamachidori_3.jpg"],
       links: [
@@ -225,7 +225,7 @@ const data = {
     {
       name: "海鮮料理きとら 津名店",
       area: "中淡路 / 東海岸 / 津名一宮IC近く",
-      coords: [34.4255, 134.9101],
+      coords: [34.4396, 134.8786],
       category: "backup",
       images: ["images/kitora.jpg", "images/kitora_2.jpg", "images/kitora_3.jpg"],
       links: [
@@ -245,7 +245,7 @@ const data = {
     {
       name: "漁師めし 友明丸",
       area: "最北端 / 東海岸 / 岩屋方面",
-      coords: [34.5878, 135.0181],
+      coords: [34.5172, 134.9577],
       category: "backup",
       images: ["images/tomoakimaru.jpg"],
       links: [{ label: "公式サイト", url: "https://www.tomoakimaru.com/" }],
@@ -261,7 +261,7 @@ const data = {
     {
       name: "GARB COSTA ORANGE",
       area: "北淡路 / 西海岸 / サンセットライン",
-      coords: [34.5328, 134.8743],
+      coords: [34.4891, 134.8553],
       category: "warning",
       images: ["images/garb.png", "images/garb_2.jpg", "images/garb_3.jpg"],
       links: [
@@ -281,7 +281,7 @@ const data = {
     {
       name: "青海波 海の舎",
       area: "北淡路 / 西海岸",
-      coords: [34.5230, 134.8709],
+      coords: [34.5801, 134.8931],
       category: "backup",
       images: ["images/seikaiha.jpg", "images/seikaiha_2.jpg"],
       links: [{ label: "公式サイト", url: "https://awaji-seikaiha.com/uminoya/" }],
@@ -298,7 +298,7 @@ const data = {
     {
       name: "クラフトキッチン / CRAFT CIRCUS",
       area: "北淡路 / 西海岸 / 野島平林",
-      coords: [34.5151, 134.8715],
+      coords: [34.5859, 134.9640],
       category: "warning",
       images: ["images/craftcircus.jpg", "images/craftcircus_2.jpg", "images/craftcircus_3.jpg"],
       links: [
@@ -318,7 +318,7 @@ const data = {
     {
       name: "淡路シェフガーデン",
       area: "北淡路 / 西海岸",
-      coords: [34.5169, 134.8770],
+      coords: [34.5865, 134.9665],
       category: "backup",
       images: ["images/chefgarden.jpg"],
       links: [{ label: "公式サイト", url: "https://www.awaji-chefgarden.com/" }],
@@ -334,7 +334,7 @@ const data = {
     {
       name: "きとら 淡路夢舞台店",
       area: "北淡路 / 東海岸 / 夢舞台内",
-      coords: [34.5610, 135.0078],
+      coords: [34.5612, 135.0068],
       category: "warning",
       images: ["images/kitora.jpg", "images/kitora_2.jpg"],
       links: [{ label: "公式サイト", url: "https://www.yumebutai.co.jp/restaurant_kitora/" }],
@@ -346,7 +346,7 @@ const data = {
     {
       name: "食い処おかや",
       area: "中淡路 / 津名方面",
-      coords: [34.4259, 134.9028],
+      coords: [34.4263, 134.8973],
       category: "backup",
       links: [{ label: "店舗情報", url: "https://sci-awaji.jp/eemon_umaimon/okaya/" }],
       badges: [{ text: "完全保険", cls: "priority-back" }],
@@ -362,7 +362,7 @@ const data = {
     {
       name: "ええとこどり 大谷店",
       area: "北淡路 / 大谷",
-      coords: [34.5179, 134.9220],
+      coords: [34.5208, 134.9242],
       category: "backup",
       images: ["images/eetokodori.jpg"],
       links: [{ label: "観光ガイド", url: "https://www.awajishima-kanko.jp/manual/detail.html?bid=544" }],
@@ -378,7 +378,7 @@ const data = {
     {
       name: "淡路SA上り 飲食ゾーン",
       area: "最北端 / 帰路上り線",
-      coords: [34.6147, 135.0299],
+      coords: [34.6082, 135.0080],
       category: "backup",
       images: ["images/awajisa.jpg", "images/awajisa_2.jpg"],
       links: [{ label: "SA情報", url: "https://www.jb-highway.co.jp/topics/business_hours.html" }],
@@ -397,7 +397,7 @@ const data = {
     {
       name: "幸せのパンケーキ 淡路島テラス",
       area: "北淡路 / 西海岸",
-      coords: [34.5475, 134.8804],
+      coords: [34.5132, 134.8695],
       category: "confirmed",
       images: ["images/pancake.jpg", "images/pancake_2.jpg", "images/pancake_3.jpg"],
       links: [
@@ -417,7 +417,7 @@ const data = {
     {
       name: "TAKAMURA COFFEE ROASTERS",
       area: "中淡路 / 東海岸 / 生穂新島",
-      coords: [34.4926, 134.9612],
+      coords: [34.4373, 134.9155],
       category: "confirmed",
       images: ["images/takamura.jpg", "images/takamura_2.jpg", "images/takamura_3.jpg"],
       links: [
@@ -438,7 +438,7 @@ const data = {
     {
       name: "GARB COSTA ORANGE",
       area: "北淡路 / 西海岸 / サンセットライン",
-      coords: [34.5328, 134.8743],
+      coords: [34.4891, 134.8553],
       category: "warning",
       images: ["images/garb.png", "images/garb_2.jpg", "images/garb_3.jpg"],
       links: [
@@ -458,7 +458,7 @@ const data = {
     {
       name: "miele the DINER",
       area: "北淡路 / 西海岸",
-      coords: [34.5169, 134.8770],
+      coords: [34.5672, 134.9525],
       category: "backup",
       images: ["images/miele.jpg", "images/miele_2.jpg", "images/miele_3.jpg"],
       links: [
@@ -477,7 +477,7 @@ const data = {
     {
       name: "のじまスコーラ／カフェ・スコーラ",
       area: "北淡路 / 西海岸 / 野島",
-      coords: [34.5558, 134.9533],
+      coords: [34.5612, 134.9359],
       category: "backup",
       images: ["images/nojima.jpg", "images/nojima_2.jpg"],
       links: [{ label: "公式サイト", url: "https://nojima-scuola.com/" }],
@@ -493,7 +493,7 @@ const data = {
     {
       name: "PICNIC GARDEN（Frogs FARM）",
       area: "北淡路 / 西海岸",
-      coords: [34.5169, 134.8770],
+      coords: [34.5859, 134.9640],
       category: "backup",
       images: ["images/picnic.jpg", "images/picnic_2.jpg"],
       links: [{ label: "公式サイト", url: "https://frogsfarm.jp/eat/picnic-garden/" }],
@@ -508,7 +508,7 @@ const data = {
     {
       name: "カフェオアシス",
       area: "最北端 / 淡路ハイウェイオアシス内",
-      coords: [34.6133, 135.0317],
+      coords: [34.6076, 135.0157],
       category: "backup",
       images: ["images/cafeoasis.jpg"],
       links: [
@@ -528,7 +528,7 @@ const data = {
     {
       name: "こぞらのおやつ",
       area: "中淡路 / 山上（淡路市里）",
-      coords: [34.4670, 134.9290],
+      coords: [34.4002, 134.8908],
       category: "backup",
       images: ["images/kozora.jpg", "images/kozora_2.jpg"],
       links: [
@@ -548,7 +548,7 @@ const data = {
     {
       name: "COFFEE BARN",
       area: "北淡路 / 西海岸 / 郡家・サンセットライン",
-      coords: [34.5310, 134.8770],
+      coords: [34.4903, 134.8566],
       category: "warning",
       images: ["images/coffeebarn.jpg", "images/coffeebarn_2.jpg", "images/coffeebarn_3.jpg"],
       links: [
@@ -568,7 +568,7 @@ const data = {
     {
       name: "グリナリウム淡路島",
       area: "北淡路 / 西海岸 / 野島常磐",
-      coords: [34.5340, 134.9120],
+      coords: [34.5375, 134.9895],
       category: "warning",
       images: ["images/greenarium.jpg", "images/greenarium_2.jpg"],
       links: [
@@ -916,15 +916,19 @@ function setupLightbox() {
 }
 
 // ====== マップ ======
-function makeIcon(type, category) {
+function makeIcon(type, category, routeIndex) {
   const color = TYPE_COLORS[type] || "#0891b2";
   const isWarn = category === "warning";
   const isConfirmed = category === "confirmed";
-  const ring = isConfirmed ? "0 0 0 3px #f59e0b" : (isWarn ? "0 0 0 3px #ef4444" : "0 0 0 2px #fff");
+  const inRoute = routeIndex != null && routeIndex >= 0;
+  const ring = inRoute
+    ? "0 0 0 3px #0891b2"
+    : (isConfirmed ? "0 0 0 3px #f59e0b" : (isWarn ? "0 0 0 3px #ef4444" : "0 0 0 2px #fff"));
   const emoji = type === "spot" ? "🌿" : type === "restaurant" ? "🍽" : "☕";
+  const numberBadge = inRoute ? `<span class="pin-number">${routeIndex + 1}</span>` : "";
   return L.divIcon({
-    className: "awaji-pin",
-    html: `<div class="pin-inner" style="background:${color};box-shadow:${ring}, 0 4px 12px rgba(0,0,0,0.25);">${emoji}</div>`,
+    className: "awaji-pin" + (inRoute ? " in-route" : ""),
+    html: `<div class="pin-inner" style="background:${color};box-shadow:${ring}, 0 4px 12px rgba(0,0,0,0.25);">${emoji}${numberBadge}</div>`,
     iconSize: [36, 36],
     iconAnchor: [18, 18]
   });
@@ -965,8 +969,11 @@ function setupMap() {
   ];
 
   const markers = allPlaces.filter(p => p.coords).map(p => {
-    const marker = L.marker(p.coords, { icon: makeIcon(p._type, p.category) });
     const pid = placeId(p._type, p);
+    const initIdx = routeIds.indexOf(pid);
+    const marker = L.marker(p.coords, {
+      icon: makeIcon(p._type, p.category, initIdx >= 0 ? initIdx : null)
+    });
     const popupHtml = `
       <div class="map-popup">
         ${p.images && p.images[0] ? `<img src="${p.images[0]}" alt="${escapeAttr(p.name)}" />` : ""}
@@ -981,9 +988,10 @@ function setupMap() {
       </div>
     `;
     marker.bindPopup(popupHtml, { maxWidth: 260 });
-    marker._meta = { type: p._type, category: p.category };
+    marker._meta = { type: p._type, category: p.category, id: pid };
     return marker;
   });
+  window._awajiMarkers = markers;
 
   function applyFilters() {
     const typeFilters = [...$$('[data-filter="type"]:checked')].map(c => c.value);
@@ -1020,6 +1028,14 @@ function updateRouteLine() {
   if (window._awajiRouteLine) {
     window._awajiRouteLine.setLatLngs(routeCoordsFromIds());
   }
+}
+
+function updateMarkerIcons() {
+  if (!window._awajiMarkers) return;
+  window._awajiMarkers.forEach(m => {
+    const idx = routeIds.indexOf(m._meta.id);
+    m.setIcon(makeIcon(m._meta.type, m._meta.category, idx >= 0 ? idx : null));
+  });
 }
 
 function renderRouteList() {
@@ -1073,6 +1089,7 @@ function syncRouteUI() {
   renderRouteList();
   renderCandidatesList();
   updateRouteLine();
+  updateMarkerIcons();
   saveRoute();
 }
 
