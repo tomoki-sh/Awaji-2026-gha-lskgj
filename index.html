@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <title>淡路島ドライブ 2026.5.21</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin="" defer></script>
 </head>
 <body>
   <header class="hero">
@@ -18,6 +24,7 @@
 
   <nav class="tabs" id="tabs">
     <button class="tab active" data-tab="schedule">スケジュール</button>
+    <button class="tab" data-tab="map">マップ</button>
     <button class="tab" data-tab="spots">スポット</button>
     <button class="tab" data-tab="restaurants">レストラン</button>
     <button class="tab" data-tab="cafes">カフェ</button>
@@ -41,6 +48,38 @@
 
       <h3 class="subhead">分岐パターン</h3>
       <div class="branches" id="branches"></div>
+    </section>
+
+    <!-- マップ -->
+    <section class="panel" id="map">
+      <h2 class="section-title">🗺 淡路島マップ</h2>
+      <p class="section-lead">スポット・レストラン・カフェの位置と、当日のルート（点線）を表示します。下のチェックで絞り込めます。</p>
+      <div class="map-controls">
+        <div class="filter-group">
+          <span class="filter-label">種類</span>
+          <label class="chip"><input type="checkbox" data-filter="type" value="spot" checked /> <span>🌿 スポット</span></label>
+          <label class="chip"><input type="checkbox" data-filter="type" value="restaurant" checked /> <span>🍽 レストラン</span></label>
+          <label class="chip"><input type="checkbox" data-filter="type" value="cafe" checked /> <span>☕ カフェ</span></label>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">優先度</span>
+          <label class="chip"><input type="checkbox" data-filter="cat" value="confirmed" checked /> <span>✅ 確定/本命</span></label>
+          <label class="chip"><input type="checkbox" data-filter="cat" value="backup" checked /> <span>🔁 予備候補</span></label>
+          <label class="chip"><input type="checkbox" data-filter="cat" value="warning" checked /> <span>⚠️ 営業要確認</span></label>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">ルート</span>
+          <label class="chip"><input type="checkbox" id="filter-route" checked /> <span>━━ 当日ルート</span></label>
+        </div>
+      </div>
+      <div id="awaji-map" class="awaji-map"></div>
+      <div class="map-legend">
+        <span class="lg-item"><span class="lg-dot" style="background:#14b8a6">🌿</span> スポット</span>
+        <span class="lg-item"><span class="lg-dot" style="background:#f97316">🍽</span> レストラン</span>
+        <span class="lg-item"><span class="lg-dot" style="background:#a855f7">☕</span> カフェ</span>
+        <span class="lg-item"><span class="lg-ring confirmed"></span> 確定/本命</span>
+        <span class="lg-item"><span class="lg-ring warning"></span> 営業要確認</span>
+      </div>
     </section>
 
     <!-- スポット -->
