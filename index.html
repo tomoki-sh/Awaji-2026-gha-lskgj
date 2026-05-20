@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>淡路島ドライブデート 2026.5.21</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-date">2026.5.21 THU</p>
+      <h1 class="hero-title">淡路島<br /><span>ドライブデート</span></h1>
+      <p class="hero-sub">海と建築と、おいしいごはん。雨の日でも楽しめるプラン。</p>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="schedule">スケジュール</button>
+    <button class="tab" data-tab="spots">スポット</button>
+    <button class="tab" data-tab="restaurants">レストラン</button>
+    <button class="tab" data-tab="cafes">カフェ</button>
+    <button class="tab" data-tab="routes">ルート</button>
+    <button class="tab" data-tab="packing">持ち物</button>
+    <button class="tab" data-tab="info">天気/注意</button>
+  </nav>
+
+  <main class="container">
+    <!-- スケジュール -->
+    <section class="panel active" id="schedule">
+      <h2 class="section-title">📅 当日スケジュール</h2>
+      <p class="section-lead">焼肉ランチ → 淡路夢舞台 → カフェ → 海 → 浜ちどりで〆。<br />天気と満腹感で柔軟に分岐します。</p>
+
+      <h3 class="subhead">固定予定</h3>
+      <ul class="fixed-list" id="fixed-list"></ul>
+
+      <h3 class="subhead">おすすめタイムライン</h3>
+      <ol class="timeline" id="timeline"></ol>
+
+      <h3 class="subhead">分岐パターン</h3>
+      <div class="branches" id="branches"></div>
+    </section>
+
+    <!-- スポット -->
+    <section class="panel" id="spots">
+      <h2 class="section-title">🌿 散策スポット</h2>
+      <div class="cards" id="spots-cards"></div>
+    </section>
+
+    <!-- レストラン -->
+    <section class="panel" id="restaurants">
+      <h2 class="section-title">🍽 レストラン</h2>
+      <div class="cards" id="restaurants-cards"></div>
+    </section>
+
+    <!-- カフェ -->
+    <section class="panel" id="cafes">
+      <h2 class="section-title">☕ カフェ</h2>
+      <div class="cards" id="cafes-cards"></div>
+    </section>
+
+    <!-- ルート -->
+    <section class="panel" id="routes">
+      <h2 class="section-title">🚗 移動ルート</h2>
+      <div class="route-block" id="route-block"></div>
+    </section>
+
+    <!-- 持ち物 -->
+    <section class="panel" id="packing">
+      <h2 class="section-title">🎒 持ち物</h2>
+      <div class="packing-block" id="packing-block"></div>
+    </section>
+
+    <!-- 天気・注意 -->
+    <section class="panel" id="info">
+      <h2 class="section-title">☔ 天気・注意事項</h2>
+      <div class="info-block" id="info-block"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>2026/5/21 awaji trip · made with ❤︎</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
